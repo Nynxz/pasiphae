@@ -1,0 +1,9 @@
+<div class="mb-4 min-w-32">
+  <a href="https://nynxz.com" class="flex flex-grow w-full">
+    <img width="64" class="mx-auto hover:opacity-50 hover:cursor-pointer" src="{{ "images/profilepicture.png" |relURL}}" alt="Profile picture">
+  </a>
+  <div class="w-full flex flex-grow">
+    <h1 class="mx-auto text-2xl font-bold">{{ site.Title }}</h1>
+  </div>
+</div>
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}

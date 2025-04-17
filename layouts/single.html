@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1 class="text-3xl font-bold sticky top-0 bg-surface0 py-2">{{ .Title }}</h1>
+
+<hr class="border-surface2">
+{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+{{ $dateHuman := .Date | time.Format ":date_long" }}
+<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+<div id="pasiphae_main">
+  {{ .Content }}
+</div>
+{{ end }}
